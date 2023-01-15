@@ -1,0 +1,20 @@
+Options -indexes
+RewriteEngine On
+RewriteBase /demo/e-gantep/kullanici-panel/
+RewriteRule ^sms-onay$ index.php?page=sms-onay [NC]
+RewriteRule ^ilan-ekle$ index.php?page=ilan-ekle [NC]
+RewriteRule ^ilan-liste$ index.php?page=ilan-liste [NC]
+RewriteRule ^ilan-duzenle/(.*)$ index.php?page=ilan-duzenle&ID=$1 [NC]
+RewriteRule ^ilan-sil/(.*)$ index.php?page=ilan-sil&ID=$1 [NC]
+RewriteRule ^hesap-ayarlari$ index.php?page=hesap-ayarlari [NC]
+RewriteRule ^profil$ index.php?page=profil [NC]
+RewriteRule ^login$ login.php [NC]
+RewriteRule ^logout$ index.php?page=logout [NC]
+RewriteRule ^resimler/(.*)/(.*)$ index.php?page=resimler&ilan=$1&ID=$2 [NC]
+RewriteRule ^resim-sil/(.*)/(.*)/(.*)$ index.php?page=resim-sil&ilan=$1&ID=$2&silinecekID=$3 [NC]
+
+
+#AuthType Basic
+#AuthName "Restricted Content"
+#AuthUserFile .htpasswd
+#require valid-user

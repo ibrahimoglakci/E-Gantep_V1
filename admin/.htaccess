@@ -1,0 +1,32 @@
+Options -indexes
+RewriteEngine On
+RewriteBase /demo/e-gantep/admin/
+RewriteRule ^list/(.*)$ index.php?page=list&table=$1 [NC]
+RewriteRule ^verification/(.*)$ index.php?page=verification&email=$1 [NC]
+RewriteRule ^add-module$ index.php?page=add-module [NC]
+RewriteRule ^add-user$ index.php?page=add-user [NC]
+RewriteRule ^list-user$ index.php?page=list-user [NC]
+RewriteRule ^edit-user/(.*)$ index.php?page=edit-user&ID=$1 [NC]
+RewriteRule ^remove-user/(.*)$ index.php?page=remove-user&ID=$1 [NC]
+RewriteRule ^add/(.*)$ index.php?page=add&table=$1 [NC]
+RewriteRule ^edit/(.*)/(.*)$ index.php?page=edit&table=$1&ID=$2 [NC]
+RewriteRule ^remove/(.*)/(.*)$ index.php?page=remove&table=$1&ID=$2 [NC]
+RewriteRule ^seo-settings$ index.php?page=seo-settings [NC]
+RewriteRule ^contact-settings$ index.php?page=contact-settings [NC]
+
+RewriteRule ^comments$ index.php?page=comments [NC]
+RewriteRule ^comments-detail/(.*)$ index.php?page=comments-detail&ID=$1 [NC]
+
+
+RewriteRule ^adverts$ index.php?page=adverts [NC]
+RewriteRule ^adverts-detail/(.*)$ index.php?page=adverts-detail&ID=$1 [NC]
+
+RewriteRule ^login$ login.php [NC]
+RewriteRule ^logout$ index.php?page=logout [NC]
+
+
+
+#AuthType Basic
+#AuthName "Restricted Content"
+#AuthUserFile .htpasswd
+#require valid-user

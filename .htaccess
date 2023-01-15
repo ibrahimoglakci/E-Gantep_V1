@@ -1,0 +1,40 @@
+Options -indexes
+RewriteEngine On
+DirectoryIndex index.php
+RewriteBase /e-gantep/
+RewriteRule ^hakkimizda$ index.php?page=hakkimizda [NC]
+RewriteRule ^planlar$ index.php?page=planlar [NC]
+RewriteRule ^kategoriler$ index.php?page=home-sektor [NC]
+RewriteRule ^populer-mekanlar$ index.php?page=home-popular [NC]
+RewriteRule ^profil/(.*)$ index.php?page=profil&seflink=$1 [NC]
+RewriteRule ^ilanlar$ index.php?page=pano-home [NC]
+RewriteRule ^giris-yap$ index.php?page=giris-yap [NC]
+RewriteRule ^kayit-ol$ index.php?page=kayit-ol [NC]
+RewriteRule ^giris-yap$ index.php?page=giris-yap [NC]
+RewriteRule ^blog$ index.php?page=blog [NC]
+RewriteRule ^iletisim$ index.php?page=iletisim [NC]
+
+RewriteRule ^profilim$ index.php?page=profilim [NC]
+RewriteRule ^profilim/kaydedilenler$ index.php?page=kaydedilenler [NC]
+RewriteRule ^profilim/ilanlarim$ index.php?page=ilanlarim [NC]
+RewriteRule ^profilim/mesajlarim$ index.php?page=mesajlarim [NC]
+RewriteRule ^profilim/yorumlar$ index.php?page=profilyorumlar [NC]
+
+RewriteRule ^pano-detay/(.*)$ index.php?page=pano-detay&seflink=$1 [NC]
+
+RewriteRule ^kayit-ol/hata/(.*)$ index.php?page=kayit-ol&errorcode=$1 [NC]
+
+
+RewriteRule ^kategoriler/(.*)$ index.php?page=kategori-detay&kategori=$1 [NC]
+
+RewriteRule ^blog/(.*)$ index.php?page=blog&sayfa=$1 [NC]
+
+RewriteRule ^blog-detay/(.*)$ index.php?page=blog-detay&seflink=$1 [NC]
+
+RewriteRule ^hesap-onay/(.*)$ index.php?page=hesap-onay&email=$1 [NC]
+
+RewriteRule ^e-gantep.aspx&kayit-turu=standart&referans=(.*)$ index.php?page=kayit-ol&referans=$1 [NC]
+
+RewriteRule ^ilan-detay/(.*)$ index.php?page=ilan-detay&seflink=$1 [NC]
+RewriteRule ^sikca-sorulan-sorular$ index.php?page=sikca-sorulan-sorular [NC]
+RewriteRule ^cikis-yap$ index.php?page=cikis-yap [NC]
